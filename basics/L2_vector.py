@@ -17,7 +17,7 @@ np.set_printoptions(precision=3)                    # after math operations, don
 def getValid(scan):                                 # remove the rows which have invalid distances
     dist = scan[:, 0]                               # store just first column
     angles = scan[:, 1]                             # store just 2nd column
-    valid = np.where(dist > 0.016)                  # find values 16mm
+    valid = np.where(dist > 0.29)                 # find values 16mm
     myNums = dist[valid]                            # get valid distances
     myAng = angles[valid]                           # get corresponding valid angles
     output = np.vstack((myNums, myAng))             # recombine columns
